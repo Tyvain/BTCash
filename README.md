@@ -1,2 +1,2 @@
 # BTCash
-Full-cloud angular website:codenvy, github, travis, heroku
+angular2, material2, mailgun
