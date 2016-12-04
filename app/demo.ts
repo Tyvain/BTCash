@@ -15,6 +15,7 @@ export class DemoComponent {
 	public constructor(private http: Http) {
         this.submitDisabled = false;
         this.successMsg = '';
+        this.btnSend = 'Send';
         this.errorMsg = '';
     }
 
@@ -22,6 +23,7 @@ export class DemoComponent {
 	public onCreate() {
         if(this.recipient && this.subject && this.message) {
             this.submitDisabled = true;
+            this.btnSend = 'Sending...';
             var data = {
                 recipient: this.recipient,
                 subject: this.subject,
@@ -33,6 +35,7 @@ export class DemoComponent {
                     var data = JSON.parse(result._body);
                     this.successMsg = data.message;
                     this.submitDisabled = false;
+                    this.btnSend = 'Send';
                     this.recipient = '';
                     this.subject = '';
                     this.message = '';
@@ -40,6 +43,7 @@ export class DemoComponent {
                     var error = JSON.parse(error._body);
                     this.errorMsg = error.statusCode;
                     this.submitDisabled = false;
+                    this.btnSend = 'Send';
                     console.log(error);
                 }
                 );

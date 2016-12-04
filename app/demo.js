@@ -26,12 +26,14 @@ System.register(['angular2/core', "angular2/http"], function(exports_1, context_
                     this.http = http;
                     this.submitDisabled = false;
                     this.successMsg = '';
+                    this.btnSend = 'Send';
                     this.errorMsg = '';
                 }
                 DemoComponent.prototype.onCreate = function () {
                     var _this = this;
                     if (this.recipient && this.subject && this.message) {
                         this.submitDisabled = true;
+                        this.btnSend = 'Sending...';
                         var data = {
                             recipient: this.recipient,
                             subject: this.subject,
@@ -42,6 +44,7 @@ System.register(['angular2/core', "angular2/http"], function(exports_1, context_
                             var data = JSON.parse(result._body);
                             _this.successMsg = data.message;
                             _this.submitDisabled = false;
+                            _this.btnSend = 'Send';
                             _this.recipient = '';
                             _this.subject = '';
                             _this.message = '';
@@ -49,6 +52,7 @@ System.register(['angular2/core', "angular2/http"], function(exports_1, context_
                             var error = JSON.parse(error._body);
                             _this.errorMsg = error.statusCode;
                             _this.submitDisabled = false;
+                            _this.btnSend = 'Send';
                             console.log(error);
                         });
                     }
