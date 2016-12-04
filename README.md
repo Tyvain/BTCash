@@ -2,12 +2,12 @@ sudo npm install
 
 1) 
 
-cd angular2_mailgun/server/
+cd BTCash/server/
 node app.js
 
 2)
 
-cd angular2_mailgun/
+cd BTCash/
 npm start
 http://localhost:3000
 
