@@ -5,6 +5,10 @@ const config=require("./config");
 const cors=require("cors");
 
 //middlewares
+
+process.env.PORT = process.env.PORT || 8000
+app.set('port', process.env.PORT);
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 app.use(cors());
@@ -32,4 +36,4 @@ app.post("/mail/create",(req, res)=>{
 
 })
 
-app.listen(8000,()=>console.log("APP IS working"));
+app.listen(app.get('port'),()=>console.log("APP IS working", app.get('port')));
