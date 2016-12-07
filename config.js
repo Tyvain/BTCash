@@ -1,4 +1,4 @@
 module.exports = {
-	api_key: 'key-3a52290d493a672ec54ae6a49d840db0',
-	domain: 'sandboxb559c3742c5743249b48a3b22c2c1542.mailgun.org'
+	api_key: 'key-1bc8e06e56d6badefb12b3df86832abb',
+	domain: 'sandbox41db17f981b345018e03f5b1dbc281fa.mailgun.org'
 }
