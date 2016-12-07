@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/ss', function(req, res){
+  res.send('ddddddddddd');
+})
+
 app.post("/mail/create",(req, res)=>{
     var mailgun = require('mailgun-js')({apiKey: config.api_key, domain: config.domain});
      
