@@ -40,7 +40,7 @@ System.register(['angular2/core', "angular2/http"], function(exports_1, context_
                             message: this.message,
                         };
                         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-                        this.http.post('http://localhost:8000/mail/create', JSON.stringify(data), { headers: headers }).subscribe(function (result) {
+                        this.http.post('/mail/create', JSON.stringify(data), { headers: headers }).subscribe(function (result) {
                             var data = JSON.parse(result._body);
                             _this.successMsg = data.message;
                             _this.submitDisabled = false;
@@ -50,7 +50,7 @@ System.register(['angular2/core', "angular2/http"], function(exports_1, context_
                             _this.message = '';
                         }, function (error) {
                             var error = JSON.parse(error._body);
-                            _this.errorMsg = error.statusCode;
+                            _this.errorMsg = error.message;
                             _this.submitDisabled = false;
                             _this.btnSend = 'Send';
                             console.log(error);

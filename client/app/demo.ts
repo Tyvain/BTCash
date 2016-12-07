@@ -8,11 +8,11 @@ import { Http, Headers, RequestOptions } from "angular2/http";
 
 export class DemoComponent { 
 
-	public recipient: string;
+    public recipient: string;
     public subject: string;
     public message: string;
 
-	public constructor(private http: Http) {
+    public constructor(private http: Http) {
         this.submitDisabled = false;
         this.successMsg = '';
         this.btnSend = 'Send';
@@ -20,7 +20,7 @@ export class DemoComponent {
     }
 
 
-	public onCreate() {
+    public onCreate() {
         if(this.recipient && this.subject && this.message) {
             this.submitDisabled = true;
             this.btnSend = 'Sending...';
@@ -30,7 +30,7 @@ export class DemoComponent {
                 message: this.message,
             }
             let headers = new Headers({ 'Content-Type': 'application/json' });
-            this.http.post('http://localhost:8000/mail/create', JSON.stringify(data), { headers: headers }).subscribe(
+            this.http.post('/mail/create', JSON.stringify(data), { headers: headers }).subscribe(
                 result => {
                     var data = JSON.parse(result._body);
                     this.successMsg = data.message;
@@ -41,7 +41,7 @@ export class DemoComponent {
                     this.message = '';
                 },error => {
                     var error = JSON.parse(error._body);
-                    this.errorMsg = error.statusCode;
+                    this.errorMsg = error.message;
                     this.submitDisabled = false;
                     this.btnSend = 'Send';
                     console.log(error);
