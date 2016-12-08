@@ -9,7 +9,7 @@
     "es6-shim": "latest",
     "express": "latest",
     "reflect-metadata": "latest",
-    "rxjs": "latest",
+    "rxjs": "5.0.0-beta.2",
     "systemjs": "latest",
     "zone.js": "latest",
     "cors": "latest",
