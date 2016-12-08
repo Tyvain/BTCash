@@ -22,9 +22,9 @@
   			<strong>Error!</strong>  {{errorMsg}}
 		</div>	
 
-	<input type="email" class="form-control" [(ngModel)]="recipient" placeholder="Your email" required><br>
-	<input type="text" class="form-control" [(ngModel)]="subject" placeholder="subject" required><br>
-	<textarea class="form-control" [(ngModel)]="message" rows="8" placeholder="Comments" required><br>
+	<input type="email" class="form-control" [(ngModel)]="recipient" placeholder="Your email" required ><br>
+	<input type="text" class="form-control" [(ngModel)]="subject" placeholder="subject" required ><br>
+	<textarea class="form-control" [(ngModel)]="message" rows="8" placeholder="Comments" required ></textarea><br>
 	<input type="button" class="btn btn-success pull-right" (click)="onCreate()" value="{{btnSend}}" [disabled]="submitDisabled">
 	</form>
 </div>
