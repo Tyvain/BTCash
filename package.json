@@ -1,24 +1,23 @@
 {
   "name": "BTCash",
   "dependencies": {
-    "body-parser": "latest",
-    "express": "latest",
-    "mailgun-js": "latest",
-    "angular2": "latest",
-    "es6-promise": "latest",
-    "es6-shim": "latest",
-    "express": "latest",
-    "reflect-metadata": "latest",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mailgun-js": "^0.7.14",
+    "angular2": "2.0.0-beta.8",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.35.0",
+    "express": "^4.14.0",
+    "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
-    "systemjs": "latest",
-    "zone.js": "latest",
-    "cors": "latest",
-    "mailgun-js": "latest"
+    "systemjs": "0.19.22",
+    "zone.js": "0.5.15",
+    "cors": "^2.8.1"
   },
   "devDependencies": {
-    "concurrently": "latest",
-    "lite-server": "latest",
-    "typescript": "latest",
-    "typings": "latest"
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.1.0",
+    "typescript": "^1.8.2",
+    "typings": "^0.6.8"
   }
 }
