@@ -45,7 +45,7 @@ System.register(['angular2/core', "angular2/http"], function(exports_1, context_
                             _this.successMsg = data.message;
                             _this.submitDisabled = false;
                             _this.btnSend = 'Send';
-                            _this.recipient = '';
+                            _this.recipient = 'toto';
                             _this.subject = '';
                             _this.message = '';
                         }, function (error) {
