@@ -17,6 +17,7 @@ export class DemoComponent {
         this.successMsg = '';
         this.btnSend = 'Send';
         this.errorMsg = '';
+        this.recipient = 'tyvain@gmail.com';
     }
 
 
