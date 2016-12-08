@@ -1,19 +1,14 @@
-<div class="row" style="padding:30px;background-color:rgb(47,46,46);position:fixed;width:100%;height: 100px;">
-	<div class="test" style="text-align:center;color:#ccc;    margin-top: -30px;">
+<div class="row">
 		<h1>MACHINE</h1>
-	</div>
-	<div class="test" style="text-align:center;">
-		<h4><a href="#" style="color:#ccc;"> AAAA BBB CCC DDD EEEE</a></h4>
+        <h4><a href="#" > AAAA BBB CCC DDD EEE</h4>
 	</div>
 </div>
 
 <div class="row">
-<label>Email</label>
-    Step 1
-    Step 2
-    Step 3
-    Step 4
-	<form class="col-md-4 col-md-offset-4 col-xs-offset-4 col-xs-6" style="position:absolute;top:130px;">
+<label>Step 1</label>
+<label>Step 2</label>
+<label>Step 3</label>
+	<form class="col-md-4 col-md-offset-4 col-xs-offset-4 col-xs-6">
 		<div class="alert alert-success alert-dismissible" *ngIf="successMsg">
   			<button type="button" class="close" data-dismiss="alert">
   				<span aria-hidden="true">&times;</span>
@@ -34,6 +29,4 @@
 	<input type="button" class="btn btn-success pull-right" (click)="onCreate()" value="{{btnSend}}" [disabled]="submitDisabled">
 	</form>
 </div>
-
-<div class="row" style="padding:30px;background-color:rgb(34,34,34);position:fixed;bottom:0;width:100%;">
-</div>
+<div class="row"/>
