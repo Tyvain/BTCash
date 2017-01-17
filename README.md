@@ -13,3 +13,5 @@ node app.js
 ## bront
 cd client 
 npm start
+
+http://localhost:3000/
